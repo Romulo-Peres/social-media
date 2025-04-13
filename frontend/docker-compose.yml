@@ -1,0 +1,13 @@
+networks:
+  blog-system:
+    driver: bridge
+
+services:
+  frontend:
+    build: .
+    networks:
+    - blog-system
+    ports:
+    - "8080:8080"
+    
+

@@ -1,0 +1,15 @@
+networks:
+  blog-system:
+    driver: bridge
+
+services:
+  database:
+    image: mariadb:lts
+    environment:
+    - MARIADB_ROOT_PASSWORD=${ROOT_PASSWORD}
+    networks:
+    - blog-system
+    expose:
+    - "3306"
+    volumes:
+    - ./database.sql:/docker-entrypoint-initdb.d/database.sql

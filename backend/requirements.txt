@@ -1,0 +1,5 @@
+pyjwt
+fastapi[standard]
+bcrypt
+uvicorn[standard]
+mariadb

@@ -1,0 +1,12 @@
+networks:
+  blog-system:
+    driver: bridge
+
+services:
+  backend:
+    build: .
+    networks:
+    - blog-system
+    ports:
+    - "8000:8000"
+
